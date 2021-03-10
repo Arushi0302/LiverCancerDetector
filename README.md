@@ -29,3 +29,6 @@ Columns:
 - Dataset: field used to split the data into two sets (patient with liver disease, or no disease)
 
 DataSet source - [indian_liver_patient](https://www.kaggle.com/uciml/indian-liver-patient-records)
+
+## API for detection
+[Here](https://github.com/Arushi0302/LiverCancer_Detector)
