@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+  
+
+</head>
+<body>
+  <div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h4 id="currentTime"></h4>
+ 
+    <br>
+    <br>
+    <h1 class="active"> Your Predictions </h1>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <h2>Results from Liver Cancer detection portal! </h2>
+    </div>
+
+    <!-- Login Form -->
+    <h3 >Liver cancer is detected according to the details entered by you.</h3>
+    <br>
+    <br>
+    <script>
+ 
+      var queryString = decodeURIComponent(window.location.search);
+      queryString = queryString.substring(1);
+      var queries = queryString.split("&");
+      for (var i = 0; i < queries.length; i++)
+      {
+        document.write(queries[i] + "<br><br>");
+      }
+      var today = new Date();
+      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      document.getElementById("currentTime").value = time;
+    </script> 
+    <br>
+    <br>
+    <form>
+      <input type="submit" class="fadeIn fourth" value="Print Report" onclick="window.print()">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="mailto:livercancer7@gmail.com">Want consultance? Mail us</a>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
