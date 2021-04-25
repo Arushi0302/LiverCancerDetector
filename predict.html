@@ -5,37 +5,97 @@
   
 
 </head>
+<style>
+  table, td, th {
+    border: 1px solid black;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+</style>
 <body>
   <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
-    <h4 id="currentTime"></h4>
+    <table>
  
-    <br>
-    <br>
-    <h1 class="active"> Your Predictions </h1>
+      <br>
+      <br>
+      <h1 class="active"> Your Predictions </h1>
 
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <h2>Results from Liver Cancer detection portal! </h2>
-    </div>
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <h2>Results from Liver Cancer detection portal! </h2>
+      </div>
 
-    <!-- Login Form -->
-    <h3 >Liver cancer is detected according to the details entered by you.</h3>
+      <!-- Login Form -->
+      <h3 >Liver cancer is detected according to the details entered by you.</h3>
+      <br>
+      <br>
+      <tr><p>Date:  <span id='date-time'></span>.</p></tr>
+      <h3>Patient's Personal Details: </h3>
+      <tr>
+        <td><p id = "d1"></p></td>
+        <td><p id = "d2"></p></td>
+      </tr>
+      <tr>
+        <td><p id = "d3"></p></td>
+        <td><p id = "d4"></p></td>
+      </tr>
+    </table>
     <br>
+    <h3>Medical details: </h3>
     <br>
+    <table>
+      <tr>
+        <td><p id = "d5"></p></td>
+        <td><p id = "d6"></p></td>
+      </tr>
+      <tr>
+        <td><p id = "d7"></p></td>
+        <td><p id = "d8"></p></td>
+      </tr>
+      <tr>
+        <td><p id = "d9"></p></td>
+        <td><p id = "d10"></p></td>
+      </tr>
+      <tr>
+        
+        <td><p id = "d11"></p></td>
+        <td><p id = "d12"></p></td>
+      </tr>
+    </table>
+    <br>
+    <h3>Results: </h3>
+    <br>
+    <table>
+      <tr>
+        <td><p id = "d13"></p></td>
+      </tr>
+      
+    </table>
     <script>
  
-      var queryString = decodeURIComponent(window.location.search);
-      queryString = queryString.substring(1);
-      var queries = queryString.split("&");
-      for (var i = 0; i < queries.length; i++)
-      {
-        document.write(queries[i] + "<br><br>");
-      }
-      var today = new Date();
-      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      document.getElementById("currentTime").value = time;
+        var queryString = decodeURIComponent(window.location.search);
+        queryString = queryString.substring(1);
+        var queries = queryString.split("&");
+        document.getElementById("d1").innerHTML = queries[0];
+        document.getElementById("d2").innerHTML = queries[1];
+        document.getElementById("d3").innerHTML = queries[2];
+        document.getElementById("d4").innerHTML = queries[3];
+        document.getElementById("d5").innerHTML = queries[4];
+        document.getElementById("d6").innerHTML = queries[5];
+        document.getElementById("d7").innerHTML = queries[6];
+        document.getElementById("d8").innerHTML = queries[7];
+        document.getElementById("d9").innerHTML = queries[8];
+        document.getElementById("d10").innerHTML = queries[9];
+        document.getElementById("d11").innerHTML = queries[10];
+        document.getElementById("d12").innerHTML = queries[11];
+        document.getElementById("d13").innerHTML = queries[12];
+        var dt = new Date();
+        document.getElementById('date-time').innerHTML=dt;
     </script> 
     <br>
     <br>
